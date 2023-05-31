@@ -1,4 +1,8 @@
-/.idea
-/build
-/ .gradle
+.gradle
+.idea
+build/
 *.class
+*.log
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/

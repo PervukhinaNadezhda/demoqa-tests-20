@@ -40,40 +40,28 @@ public class AutomationPracticeForm {
         $(".react-datepicker__day--020").click();
 
         $("#subjectsInput").setValue("g");
-        $(byText("English")).click();
+        $("#subjectsWrapper").$(byText("English")).click();
 
         $("#hobbiesWrapper").$(byText("Sports")).click();
         $("#uploadPicture").uploadFromClasspath("images.jpg");
         $("#currentAddress").setValue("Address");
 
         $("#state").click();
-        $(byText("NCR")).click();
+        $("#stateCity-wrapper").$(byText("NCR")).click();
         $("#city").click();
-        $(byText("Delhi")).click();
+        $("#stateCity-wrapper").$(byText("Delhi")).click();
         $("#submit").click();
 
 
-        $(".modal-body tr:nth-child(1) td:nth-child(2)").shouldHave(text("Alex Egorov"));
-        $(".modal-body tr:nth-child(2) td:nth-child(2)").shouldHave(text("AlexEgorov@mail.ru"));
-        $(".modal-body tr:nth-child(3) td:nth-child(2)").shouldHave(text("Male"));
-        $(".modal-body tr:nth-child(4) td:nth-child(2)").shouldHave(text("9991112233"));
-        $(".modal-body tr:nth-child(5) td:nth-child(2)").shouldHave(text("20 April,1994"));
-        $(".modal-body tr:nth-child(6) td:nth-child(2)").shouldHave(text("English"));
-        $(".modal-body tr:nth-child(7) td:nth-child(2)").shouldHave(text("Sports"));
-        $(".modal-body tr:nth-child(8) td:nth-child(2)").shouldHave(text("images.jpg"));
-        $(".modal-body tr:nth-child(9) td:nth-child(2)").shouldHave(text("Address"));
-        $(".modal-body tr:nth-child(10) td:nth-child(2)").shouldHave(text("NCR Delhi"));
+        $(".table-responsive").$(byText("Student Name")).parent().shouldHave(text("Alex Egorov"));
+        $(".table-responsive").$(byText("Student Email")).parent().shouldHave(text("AlexEgorov@mail.ru"));
+        $(".table-responsive").$(byText("Gender")).parent().shouldHave(text("Male"));
+        $(".table-responsive").$(byText("Mobile")).parent().shouldHave(text("9991112233"));
+        $(".table-responsive").$(byText("Date of Birth")).parent().shouldHave(text("20 April,1994"));
+        $(".table-responsive").$(byText("Subjects")).parent().shouldHave(text("English"));
+        $(".table-responsive").$(byText("Hobbies")).parent().shouldHave(text("Sports"));
+        $(".table-responsive").$(byText("Picture")).parent().shouldHave(text("images.jpg"));
+        $(".table-responsive").$(byText("Address")).parent().shouldHave(text("Address"));
+        $(".table-responsive").$(byText("State and City")).parent().shouldHave(text("NCR Delhi"));
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
