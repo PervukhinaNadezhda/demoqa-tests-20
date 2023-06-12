@@ -10,15 +10,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class AutomationPracticeForm {
-
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
-        Configuration.holdBrowserOpen = true;
-        Configuration.pageLoadStrategy = "eager";
-    }
+public class AutomationPracticeForm extends TestBase {
 
     @Test
     void formValidation(){
@@ -33,11 +25,9 @@ public class AutomationPracticeForm {
         $("#userNumber").setValue("9991112233");
 
         $("#dateOfBirth-wrapper").$("#dateOfBirthInput").click();
-        $("#dateOfBirth-wrapper").$(".react-datepicker__month-select").click();
-        $("#dateOfBirth-wrapper").$(byText("April")).click();
-        $("#dateOfBirth-wrapper").$(".react-datepicker__year-select").click();
-        $("#dateOfBirth-wrapper").$(byText("1994")).click();
-        $(".react-datepicker__day--020").click();
+        $(".react-datepicker__month-select").selectOption("April");
+        $(".react-datepicker__year-select").selectOption("1994");
+        $(".react-datepicker__day--020:not(react-datepicker__day--outside-month)").click();
 
         $("#subjectsInput").setValue("g");
         $("#subjectsWrapper").$(byText("English")).click();
