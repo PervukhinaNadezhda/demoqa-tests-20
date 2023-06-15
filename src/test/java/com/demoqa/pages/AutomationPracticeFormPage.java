@@ -34,7 +34,7 @@ public class AutomationPracticeFormPage {
     }
 
 
-    public AutomationPracticeFormPage RemoveBanner(){
+    public AutomationPracticeFormPage removeBanner(){
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
         return this;

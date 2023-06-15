@@ -3,7 +3,7 @@ package com.demoqa.tests;
 import com.demoqa.pages.AutomationPracticeFormPage;
 import org.junit.jupiter.api.Test;
 
-public class AutomationPracticeFormWithPageObjects extends TestBase {
+public class AutomationPracticeFormWithPageObjectsTests extends TestBase {
 
     AutomationPracticeFormPage automationPracticeFormPage = new AutomationPracticeFormPage();
 
@@ -11,7 +11,7 @@ public class AutomationPracticeFormWithPageObjects extends TestBase {
     void formValidation() {
         automationPracticeFormPage
                 .openPage()
-                .RemoveBanner()
+                .removeBanner()
                 .setFirstName("Alex")
                 .setLastName("Egorov")
                 .setUserEmail("AlexEgorov@mail.ru")
