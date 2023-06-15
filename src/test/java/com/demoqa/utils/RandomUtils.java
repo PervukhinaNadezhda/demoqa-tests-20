@@ -12,17 +12,15 @@ public class RandomUtils {
     }
 
     public static String getRandomGender() {
-        String[] genders = {"Male", "Female", "Other"};
-        return faker.options().option(genders);
+        return faker.options().option("Male", "Female", "Other");
     }
 
     public static String getRandomMonth() {
-        String[] month = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-        return faker.options().option(month);
+        return faker.options().option(  "January", "February", "March", "April", "May", "June", "July",
+                                                "August", "September", "October", "November", "December");
     }
 
     public static String getRandomHobbies() {
-        String[] hobby = {"Sports", "Reading", "Music"};
-        return faker.options().option(hobby);
+        return faker.options().option("Sports", "Reading", "Music");
     }
 }

@@ -11,7 +11,7 @@ public class AutomationPracticeFormWithPageObjectsTests extends TestBase {
     void formValidation() {
         automationPracticeFormPage
                 .openPage()
-                .RemoveBanner()
+                .removeBanner()
                 .setFirstName("Alex")
                 .setLastName("Egorov")
                 .setUserEmail("AlexEgorov@mail.ru")

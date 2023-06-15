@@ -12,7 +12,7 @@ public class AutomationPracticeFormWithTestDataTests extends TestBase {
     void formValidation() {
         automationPracticeFormPage
                 .openPage()
-                .RemoveBanner()
+                .removeBanner()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setUserEmail(userEmail)
